@@ -1,0 +1,27 @@
+[package]
+name = "multiplayer_game"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = { version = "1.0.75", features = ["backtrace"] }
+cgmath = { version = "0.18.0", features = ["serde"] }
+ciborium = "0.2.1"
+eframe = { version = "0.24.1", default-features = false, features = [
+    "wgpu",
+    "default_fonts",
+] }
+encase = { version = "0.6.1", features = ["cgmath"] }
+serde = { version = "1.0.193", features = ["derive"] }
+thiserror = "1.0.50"
+tokio = { version = "1.34.0", features = [
+    "rt-multi-thread",
+    "sync",
+    "io-std",
+    "io-util",
+    "net",
+    "parking_lot",
+    "time",
+    "macros",
+] }
+uuid = { version = "1.6.1", features = ["v4", "serde"] }
